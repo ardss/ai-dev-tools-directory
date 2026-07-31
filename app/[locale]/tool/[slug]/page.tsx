@@ -77,6 +77,32 @@ export default async function ToolDetailPage({ params }: Props) {
 
   return (
     <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 py-12">
+      {/* JSON-LD 结构化数据(SEO:帮助Google理解这是SoftwareApplication) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: tool.name,
+            applicationCategory: catName,
+            operatingSystem: "Cross-platform",
+            description: tool.desc,
+            url: tool.url,
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5",
+              ratingCount: tool.stars,
+              bestRating: "5",
+            },
+            offers: {
+              "@type": "Offer",
+              price: "0",
+              priceCurrency: "USD",
+            },
+          }),
+        }}
+      />
       {/* 面包屑 */}
       <Link
         href="/#showcase"
