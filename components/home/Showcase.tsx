@@ -1,7 +1,10 @@
-import { ArrowUpRightIcon, Star } from "lucide-react";
+"use client";
+
+import { ArrowUpRightIcon, Star, Search } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import { tools as allTools, categories } from "@/data/tools";
+import { useMemo, useState } from "react";
 
 // star数字格式化: 82600 -> "82.6k", 1230000 -> "1.2m"
 function formatStars(n: number): string {
@@ -13,6 +16,21 @@ function formatStars(n: number): string {
 export default function Showcase() {
   const t = useTranslations("Showcase");
   const locale = useLocale();
+  const [query, setQuery] = useState("");
+
+  // 搜索过滤(按名称/描述/分类)
+  const filteredTools = useMemo(() => {
+    if (!query.trim()) return allTools;
+    const q = query.toLowerCase();
+    return allTools.filter(
+      (tool) =>
+        tool.name.toLowerCase().includes(q) ||
+        tool.desc.toLowerCase().includes(q) ||
+        tool.fullName.toLowerCase().includes(q)
+    );
+  }, [query]);
+
+  const totalShown = filteredTools.length;
 
   return (
     <section id="showcase" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 scroll-mt-16">
@@ -23,11 +41,28 @@ export default function Showcase() {
         <p className="mt-4 text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
           {t("description")}
         </p>
+
+        {/* 搜索框 */}
+        <div className="mt-8 max-w-md mx-auto relative">
+          <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder={locale === "zh" ? "搜索工具(名称/描述)..." : locale === "ja" ? "ツールを検索..." : "Search tools..."}
+            className="w-full pl-12 pr-4 py-3 bg-white dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-slate-900 dark:text-gray-200"
+          />
+        </div>
+        {query && (
+          <p className="mt-3 text-sm text-slate-500 dark:text-slate-400">
+            {totalShown} / {allTools.length} {locale === "zh" ? "个工具匹配" : "tools match"}
+          </p>
+        )}
       </div>
 
       <div className="space-y-12">
         {categories.map((cat) => {
-          const items = allTools.filter((i) => i.category === cat.id);
+          const items = filteredTools.filter((i) => i.category === cat.id);
           if (items.length === 0) return null;
           const catName = locale === "zh" ? cat.zh : locale === "ja" ? cat.ja : cat.en;
           return (
@@ -73,6 +108,15 @@ export default function Showcase() {
             </div>
           );
         })}
+
+        {/* 搜索无结果 */}
+        {totalShown === 0 && (
+          <div className="text-center py-12">
+            <p className="text-slate-500 dark:text-slate-400">
+              {locale === "zh" ? "没有匹配的工具" : locale === "ja" ? "一致するツールがありません" : "No tools match your search"}
+            </p>
+          </div>
+        )}
       </div>
     </section>
   );
