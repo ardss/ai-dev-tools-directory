@@ -28,6 +28,9 @@ export const categories: Category[] = [
   { id: "mcp", zh: "能力扩展(MCP/Skills)", en: "Capability (MCP/Skills)", ja: "能力拡張(MCP/Skills)" },
   { id: "gateway", zh: "LLM网关", en: "LLM Gateways", ja: "LLMゲートウェイ" },
   { id: "memory", zh: "记忆/上下文", en: "Memory & Context", ja: "メモリ・コンテキスト" },
+  { id: "vector-db", zh: "向量数据库/检索", en: "Vector DB & Search", ja: "ベクトルDB・検索" },
+  { id: "llm-runtime", zh: "LLM运行时", en: "LLM Runtime", ja: "LLMランタイム" },
+  { id: "model-framework", zh: "模型框架", en: "Model Frameworks", ja: "モデルフレームワーク" },
 ];
 
 export const tools: Tool[] = [
@@ -81,6 +84,17 @@ export const tools: Tool[] = [
   { name: "Gemini CLI", fullName: "google-gemini/gemini-cli", url: "https://github.com/google-gemini/gemini-cli", stars: 106300, category: "gateway", desc: "谷歌开源,把Gemini直接带到终端" },
   { name: "LiteLLM", fullName: "BerriAI/litellm", url: "https://github.com/BerriAI/litellm", stars: 55100, category: "gateway", desc: "统一API代理,300+模型一键切换" },
   // 记忆/上下文
-  { name: "claude-mem", fullName: "thedotmack/claude-mem", url: "https://github.com/thedmack/claude-mem", stars: 89100, category: "memory", desc: "跨会话的持久上下文,捕获每个agent" },
+  { name: "claude-mem", fullName: "thedotmack/claude-mem", url: "https://github.com/thedotmack/claude-mem", stars: 89100, category: "memory", desc: "跨会话的持久上下文,捕获每个agent" },
   { name: "Hermes Agent", fullName: "NousResearch/hermes-agent", url: "https://github.com/NousResearch/hermes-agent", stars: 223200, category: "memory", desc: "随你成长的agent(NousResearch)" },
+  // 向量数据库/检索
+  { name: "Milvus", fullName: "milvus-io/milvus", url: "https://github.com/milvus-io/milvus", stars: 45400, category: "vector-db", desc: "高性能云原生向量数据库" },
+  { name: "LlamaIndex", fullName: "run-llama/llama_index", url: "https://github.com/run-llama/llama_index", stars: 51200, category: "vector-db", desc: "领先的文档agent和OCR平台" },
+  { name: "Meilisearch", fullName: "meilisearch/meilisearch", url: "https://github.com/meilisearch/meilisearch", stars: 58800, category: "vector-db", desc: "极速搜索引擎API,AI驱动的相关性" },
+  { name: "PageIndex", fullName: "VectifyAI/PageIndex", url: "https://github.com/VectifyAI/PageIndex", stars: 34900, category: "vector-db", desc: "无向量的文档索引,基于推理" },
+  // LLM运行时/推理
+  { name: "Ollama", fullName: "ollama/ollama", url: "https://github.com/ollama/ollama", stars: 177400, category: "llm-runtime", desc: "本地运行Kimi/GLM/MiniMax/DeepSeek等模型" },
+  { name: "AutoGPT", fullName: "Significant-Gravitas/AutoGPT", url: "https://github.com/Significant-Gravitas/AutoGPT", stars: 185700, category: "llm-runtime", desc: "Accessible AI for everyone,低代码agent平台" },
+  // 模型框架
+  { name: "Transformers", fullName: "huggingface/transformers", url: "https://github.com/huggingface/transformers", stars: 163200, category: "model-framework", desc: "模型定义框架,PyTorch/TensorFlow/JAX" },
+  { name: "PydanticAI", fullName: "pydantic/pydantic-ai", url: "https://github.com/pydantic/pydantic-ai", stars: 18900, category: "model-framework", desc: "AI Agent框架,Pydantic方式" },
 ];
