@@ -1,6 +1,6 @@
 import { DEFAULT_LOCALE, LOCALES } from '@/i18n/routing'
 import { getPosts } from '@/lib/getBlogs'
-import { tools } from '@/data/tools'
+import { tools, categories } from '@/data/tools'
 import { MetadataRoute } from 'next'
 
 // 优先用环境变量,回退到真实部署域名
@@ -43,6 +43,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     }))
   })
 
+  // 对比页(F1 MVP:同分类两两组合,高商业意图)
+  const comparePages = LOCALES.flatMap(locale => {
+    const pairs: { a: string; b: string }[] = []
+    for (const cat of categories) {
+      const inCat = tools.filter(t => t.category === cat.id)
+      for (let i = 0; i < inCat.length; i++) {
+        for (let j = i + 1; j < inCat.length; j++) {
+          const a = slugify(inCat[i].fullName)
+          const b = slugify(inCat[j].fullName)
+          if (!pairs.some(p => (p.a === a && p.b === b) || (p.a === b && p.b === a))) {
+            pairs.push({ a, b })
+          }
+        }
+      }
+    }
+    return pairs.map(({ a, b }) => ({
+      url: `${siteUrl}${locale === DEFAULT_LOCALE ? '' : `/${locale}`}/compare/${a}/${b}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as ChangeFrequency,
+      priority: 0.8,
+    }))
+  })
+
   const blogPosts = await Promise.all(
     LOCALES.map(async (locale) => {
       const { posts } = await getPosts(locale)
@@ -58,6 +81,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...pages,
     ...toolPages,
+    ...comparePages,
     ...blogPosts,
   ]
 }
