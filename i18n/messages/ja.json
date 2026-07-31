@@ -1,0 +1,149 @@
+{
+  "LanguageDetection": {
+    "title": "言語の提案",
+    "description": "ブラウザの言語設定が現在のサイト言語と異なっています。いつでも言語を切り替えることができます。",
+    "countdown": "閉じるまで {countdown} 秒",
+    "switchTo": "に切り替える"
+  },
+  "Header": {
+    "links": [
+      {
+        "name": "ブログ",
+        "href": "/blog"
+      },
+      {
+        "name": "サイトについて",
+        "href": "/about"
+      },
+      {
+        "name": "Source Code",
+        "href": "https://github.com/weijunext/nextjs-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Pro Version",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  },
+  "Footer": {
+    "Copyright": "Copyright © {year} {name} All rights reserved.",
+    "PrivacyPolicy": "プライバシーポリシー",
+    "TermsOfService": "利用規約",
+    "Links": {
+      "groups": [
+        {
+          "title": "言語",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/zh",
+              "name": "中文",
+              "useA": true
+            },
+            {
+              "href": "/ja",
+              "name": "日本語",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "オープンソースプロジェクト",
+          "links": [
+            {
+              "href": "https://github.com/weijunext/nextjs-starter",
+              "name": "AI Dev Tools",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/landing-page-boilerplate",
+              "name": "Landing Page Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/weekly-boilerplate",
+              "name": "Blog Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "その他の製品",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "Nexty - SaaS Template",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://myogimage.com/",
+              "name": "OG Image Generator",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "Newsletter": {
+      "title": "AI Dev Toolsのニュースレターに登録する",
+      "description": "AI Dev Toolsの最新のニュースと更新情報を入手します。",
+      "defaultErrorMessage": "有効なメールアドレスを入力してください。",
+      "successMessage": "登録が完了しました。",
+      "errorMessage": "登録に失敗しました。",
+      "errorMessage2": "登録に失敗しました。少し待ってから再試行してください。",
+      "subscribe": "登録する",
+      "subscribing": "登録中...",
+      "subscribed": "登録が完了しました。ありがとうございます。"
+    }
+  },
+  "Home": {
+    "title": "AI Dev Tools",
+    "tagLine": "開発者向け最高のAIツール",
+    "description": "開発者向けベストオープンソースAIツールの厳選ディレクトリ。コーディングエージェント、ブラウザ自動化、RAG、マルチエージェントフレームワーク、MCPサーバーなど—GitHubスター順、定期更新。"
+  },
+  "Blog": {
+    "title": "ブログ一覧",
+    "description": "ブログ投稿の一覧"
+  },
+  "About": {
+    "title": "サイトについて",
+    "description": "サイトについて"
+  },
+  "TermsOfService": {
+    "title": "サービス利用規約",
+    "description": "サービス利用規約"
+  },
+  "PrivacyPolicy": {
+    "title": "プライバシーポリシー",
+    "description": "プライバシーポリシー"
+  },
+  "Showcase": {
+    "title": "AI開発者ツールを探索",
+    "description": "厳選オープンソースプロジェクト、カテゴリと人気順。"
+  },
+  "Submission": {
+    "badge": "掲載される",
+    "title": "AIツールを投稿",
+    "description": "まだ載っていない優秀なオープンソースAI開発ツールを知っていますか?投稿して掲載されましょう。",
+    "productNameLabel": "ツール名",
+    "productNamePlaceholder": "例:Awesome Agent",
+    "productUrlLabel": "GitHub / ウェブサイトURL",
+    "submit": "ツールを投稿",
+    "submitting": "送信中...",
+    "successMessage": "ありがとうございます!ツールの投稿を受け付けました。まもなく審査して追加します。",
+    "errorMessage": "エラーが発生しました。再試行してください。"
+  }
+}

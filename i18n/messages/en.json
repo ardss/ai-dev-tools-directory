@@ -1,0 +1,149 @@
+{
+  "LanguageDetection": {
+    "title": "Language Suggestion",
+    "description": "We noticed your browser language differs from the current site language. You can switch languages anytime.",
+    "countdown": "Closing in {countdown} seconds",
+    "switchTo": "Switch to"
+  },
+  "Header": {
+    "links": [
+      {
+        "name": "Blog",
+        "href": "/blog"
+      },
+      {
+        "name": "About",
+        "href": "/about"
+      },
+      {
+        "name": "Source Code",
+        "href": "https://github.com/weijunext/nextjs-starter",
+        "target": "_blank",
+        "rel": "noopener noreferrer nofollow"
+      },
+      {
+        "name": "Pro Version",
+        "href": "https://nexty.dev",
+        "target": "_blank",
+        "rel": "noopener noreferrer"
+      }
+    ]
+  },
+  "Footer": {
+    "Copyright": "Copyright © {year} {name} All rights reserved.",
+    "PrivacyPolicy": "Privacy Policy",
+    "TermsOfService": "Terms of Service",
+    "Links": {
+      "groups": [
+        {
+          "title": "Languages",
+          "links": [
+            {
+              "href": "/en",
+              "name": "English",
+              "useA": true
+            },
+            {
+              "href": "/zh",
+              "name": "中文",
+              "useA": true
+            },
+            {
+              "href": "/ja",
+              "name": "日本語",
+              "useA": true
+            }
+          ]
+        },
+        {
+          "title": "Open Source",
+          "links": [
+            {
+              "href": "https://github.com/weijunext/nextjs-starter",
+              "name": "AI Dev Tools",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/landing-page-boilerplate",
+              "name": "Landing Page Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            },
+            {
+              "href": "https://github.com/weijunext/weekly-boilerplate",
+              "name": "Blog Boilerplate",
+              "rel": "noopener noreferrer nofollow",
+              "target": "_blank"
+            }
+          ]
+        },
+        {
+          "title": "Other Products",
+          "links": [
+            {
+              "href": "https://nexty.dev/",
+              "name": "Nexty - SaaS Template",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            },
+            {
+              "href": "https://myogimage.com/",
+              "name": "OG Image Generator",
+              "rel": "noopener noreferrer",
+              "target": "_blank"
+            }
+          ]
+        }
+      ]
+    },
+    "Newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest news and updates from AI Dev Tools",
+      "defaultErrorMessage": "Please enter a valid email address",
+      "successMessage": "Subscription successful",
+      "errorMessage": "Subscription failed",
+      "errorMessage2": "Subscription failed. Please try again later.",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "subscribed": "Subscription successful! Thank you for your attention."
+    }
+  },
+  "Home": {
+    "title": "AI Dev Tools",
+    "tagLine": "Best AI Tools for Developers",
+    "description": "A curated directory of the best open-source AI tools for developers. Discover coding agents, browser automation, RAG, multi-agent frameworks, MCP servers and more — ranked by GitHub stars, updated regularly."
+  },
+  "Blog": {
+    "title": "Blog Posts",
+    "description": "A list of blog posts"
+  },
+  "About": {
+    "title": "About",
+    "description": "About the site"
+  },
+  "TermsOfService": {
+    "title": "Terms of Service",
+    "description": "Terms of Service"
+  },
+  "PrivacyPolicy": {
+    "title": "Privacy Policy",
+    "description": "Privacy Policy"
+  },
+  "Showcase": {
+    "title": "Explore AI Developer Tools",
+    "description": "Hand-picked open-source projects, sorted by category and popularity."
+  },
+  "Submission": {
+    "badge": "Get Featured",
+    "title": "Submit an AI Tool",
+    "description": "Know a great open-source AI tool for developers that's missing here? Submit it and get featured in our directory.",
+    "productNameLabel": "Tool Name",
+    "productNamePlaceholder": "e.g. Awesome Agent",
+    "productUrlLabel": "GitHub / Website URL",
+    "submit": "Submit Tool",
+    "submitting": "Submitting...",
+    "successMessage": "Thanks! Your tool submission has been received. We'll review and add it shortly.",
+    "errorMessage": "Something went wrong. Please try again."
+  }
+}
