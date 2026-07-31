@@ -31,6 +31,9 @@ export const categories: Category[] = [
   { id: "vector-db", zh: "向量数据库/检索", en: "Vector DB & Search", ja: "ベクトルDB・検索" },
   { id: "llm-runtime", zh: "LLM运行时", en: "LLM Runtime", ja: "LLMランタイム" },
   { id: "model-framework", zh: "模型框架", en: "Model Frameworks", ja: "モデルフレームワーク" },
+  { id: "image-gen", zh: "图像生成", en: "Image Generation", ja: "画像生成" },
+  { id: "tts", zh: "TTS/语音", en: "TTS & Voice", ja: "TTS・音声" },
+  { id: "docs", zh: "文档处理", en: "Document Processing", ja: "ドキュメント処理" },
 ];
 
 export const tools: Tool[] = [
@@ -97,4 +100,16 @@ export const tools: Tool[] = [
   // 模型框架
   { name: "Transformers", fullName: "huggingface/transformers", url: "https://github.com/huggingface/transformers", stars: 163200, category: "model-framework", desc: "模型定义框架,PyTorch/TensorFlow/JAX" },
   { name: "PydanticAI", fullName: "pydantic/pydantic-ai", url: "https://github.com/pydantic/pydantic-ai", stars: 18900, category: "model-framework", desc: "AI Agent框架,Pydantic方式" },
+  // 图像生成(新分类)
+  { name: "Stable Diffusion WebUI", fullName: "AUTOMATIC1111/stable-diffusion-webui", url: "https://github.com/AUTOMATIC1111/stable-diffusion-webui", stars: 164300, category: "image-gen", desc: "Stable Diffusion的Web UI,本地图像生成" },
+  { name: "ComfyUI", fullName: "Comfy-Org/ComfyUI", url: "https://github.com/Comfy-Org/ComfyUI", stars: 123000, category: "image-gen", desc: "最强大的模块化扩散模型GUI/后端" },
+  { name: "LocalAI", fullName: "mudler/LocalAI", url: "https://github.com/mudler/LocalAI", stars: 48000, category: "image-gen", desc: "开源AI引擎,本地运行任何模型(文本/图像/音频)" },
+  // TTS/语音(新分类)
+  { name: "GPT-SoVITS", fullName: "RVC-Boss/GPT-SoVITS", url: "https://github.com/RVC-Boss/GPT-SoVITS", stars: 60300, category: "tts", desc: "1分钟语音数据训练高质量TTS/语音克隆" },
+  { name: "Coqui TTS", fullName: "coqui-ai/TTS", url: "https://github.com/coqui-ai/TTS", stars: 45800, category: "tts", desc: "深度学习Text-to-Speech工具包" },
+  // 文档处理(新分类)
+  { name: "MarkItDown", fullName: "microsoft/markitdown", url: "https://github.com/microsoft/markitdown", stars: 170500, category: "docs", desc: "微软出品,把文件/Office文档转成Markdown" },
+  // 向量数据库(补充)
+  { name: "Qdrant", fullName: "qdrant/qdrant", url: "https://github.com/qdrant/qdrant", stars: 33700, category: "vector-db", desc: "高性能、大规模向量数据库" },
+  { name: "ScrapeGraphAI", fullName: "ScrapeGraphAI/Scrapegraph-ai", url: "https://github.com/ScrapeGraphAI/Scrapegraph-ai", stars: 28800, category: "vector-db", desc: "基于AI的Python爬虫" },
 ];
