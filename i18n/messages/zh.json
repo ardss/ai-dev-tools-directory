@@ -8,6 +8,10 @@
   "Header": {
     "links": [
       {
+        "name": "工具",
+        "href": "/#showcase"
+      },
+      {
         "name": "博客",
         "href": "/blog"
       },
@@ -16,16 +20,10 @@
         "href": "/about"
       },
       {
-        "name": "源码",
-        "href": "https://github.com/weijunext/nextjs-starter",
+        "name": "GitHub",
+        "href": "https://github.com/ardss/ai-dev-tools-directory",
         "target": "_blank",
         "rel": "noopener noreferrer nofollow"
-      },
-      {
-        "name": "高级版",
-        "href": "https://nexty.dev",
-        "target": "_blank",
-        "rel": "noopener noreferrer"
       }
     ]
   },
@@ -52,46 +50,6 @@
               "href": "/ja",
               "name": "日本語",
               "useA": true
-            }
-          ]
-        },
-        {
-          "title": "开源项目",
-          "links": [
-            {
-              "href": "https://github.com/weijunext/nextjs-starter",
-              "name": "AI Dev Tools",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            },
-            {
-              "href": "https://github.com/weijunext/landing-page-boilerplate",
-              "name": "Landing Page Boilerplate",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            },
-            {
-              "href": "https://github.com/weijunext/weekly-boilerplate",
-              "name": "Blog Boilerplate",
-              "rel": "noopener noreferrer nofollow",
-              "target": "_blank"
-            }
-          ]
-        },
-        {
-          "title": "其他产品",
-          "links": [
-            {
-              "href": "https://nexty.dev/",
-              "name": "Nexty - SaaS Template",
-              "rel": "noopener noreferrer",
-              "target": "_blank"
-            },
-            {
-              "href": "https://myogimage.com/",
-              "name": "OG Image Generator",
-              "rel": "noopener noreferrer",
-              "target": "_blank"
             }
           ]
         }

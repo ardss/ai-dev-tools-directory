@@ -1,15 +1,10 @@
 import { SiteConfig } from "@/types/siteConfig";
 
-export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://nextjsstarter.io";
+export const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://ai-dir-final.vercel.app";
 
-export const SOURCE_CODE_URL = "https://github.com/weijunext/nextjs-starter";
-export const PRO_VERSION = "https://nexty.dev";
+export const SOURCE_CODE_URL = "https://github.com/ardss/ai-dev-tools-directory";
 
-const TWITTER_URL = 'https://x.com/weijunext'
-const BSKY_URL = 'https://bsky.app/profile/judewei.bsky.social'
-const EMAIL_URL = 'weijunext@gmail.com'
-const GITHUB_URL = 'https://github.com/weijunext'
-const DISCORD_URL = process.env.NEXT_PUBLIC_DISCORD_INVITE_URL
+const GITHUB_URL = 'https://github.com/ardss/ai-dev-tools-directory'
 
 export const siteConfig: SiteConfig = {
   name: "AI Dev Tools",
@@ -19,17 +14,13 @@ export const siteConfig: SiteConfig = {
   url: BASE_URL,
   authors: [
     {
-      name: "weijunext",
-      url: "https://weijunext.com",
+      name: "ardss",
+      url: "https://github.com/ardss",
     }
   ],
-  creator: '@weijunext',
+  creator: '@ardss',
   socialLinks: {
-    discord: DISCORD_URL,
-    twitter: TWITTER_URL,
     github: GITHUB_URL,
-    bluesky: BSKY_URL,
-    email: EMAIL_URL
   },
   themeColors: [
     { media: '(prefers-color-scheme: light)', color: 'white' },
